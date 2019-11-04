@@ -26,14 +26,21 @@ namespace HelloWorld
 
             object oggetto;
 
+            
             Person luca = new Person("Luca", "Lippi");         //p oggetto con modello la classe Person
-            luca.età = 18;
+            luca.age = 18;
             Console.WriteLine(luca.Anagrafica());
 
             Person giovanni = luca;
 
-            giovanni.nome = "Giovanni";
+            giovanni.name = "Giovanni";
             Console.WriteLine(giovanni.Anagrafica());
+            
+
+            Person andrea = new Person("Andrea", "Parodi", 170, 70);
+
+            //Console.WriteLine(andrea.CalculateBMI());
+            Console.WriteLine(andrea.Anagrafica());
         }
     }
 }
