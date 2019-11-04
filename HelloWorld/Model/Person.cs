@@ -11,7 +11,7 @@ namespace HelloWorld.Model
         public int age;
         public string sex;
         public int height;
-        public double peso;
+        public double weight;
         public Person(string nome, string cognome)      //Firma completa del metodo
         {
             this.name = nome;       //Il this serve per riferirsi alla variabile della classe
@@ -40,18 +40,18 @@ namespace HelloWorld.Model
             this.name = nome;
             this.surname = cognome;
             this.height = altezza;
-            this.peso = peso;
+            this.weight = peso;
         }
         public double CalculateBMI()
         {
-            if(this.height == 0 || this.peso == 0)
+            if(this.height == 0 || this.weight == 0)
             {
                 return -1;
             }
             else
             {
                 double altM = (double)this.height / 100;
-                double bmi = this.peso / (altM * altM);
+                double bmi = this.weight / (altM * altM);
                 return bmi;
             }
             
